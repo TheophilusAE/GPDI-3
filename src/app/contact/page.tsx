@@ -44,7 +44,7 @@ export default function ContactPage() {
     {
       icon: MapPin,
       title: 'Alamat',
-      details: 'Jl. Persadamas No. 123, Banjarmasin, Kalimantan Selatan',
+      details: 'Tatah Belayung Baru, Kertak Hanyar, Banjarmasin, Kalimantan Selatan 70654',
       description: 'Kunjungi kami di lokasi kami'
     },
     {
@@ -56,9 +56,11 @@ export default function ContactPage() {
   ];
 
   const serviceTimes = [
-    { day: 'Minggu', times: '09:00 & 11:00', service: 'Ibadah Minggu' },
-    { day: 'Rabu', times: '19:00', service: 'Ibadah Doa' },
-    { day: 'Kamis', times: '19:00', service: 'Studi Alkitab' }
+    { day: 'Minggu', times: '08:30 & 16:00', service: 'Ibadah Minggu I & II' },
+    { day: 'Rabu', times: '19:00', service: 'Ibadah Tengah Minggu' },
+    { day: 'Kamis', times: '19:00', service: 'Latihan Pelayan' },
+    { day: 'Jumat', times: '19:00', service: 'Doa Malam & Puasa' },
+    { day: 'Sabtu', times: '16:00 & 19.00', service: 'Ibadah Pemuda Spark & Blast' },
   ];
 
   return (
@@ -146,7 +148,7 @@ export default function ContactPage() {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-700 placeholder-gray-500"
                       placeholder="Nama lengkap Anda"
                     />
                   </div>
@@ -161,7 +163,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-700 placeholder-gray-500"
                       placeholder="email.anda@contoh.com"
                     />
                   </div>
@@ -178,7 +180,7 @@ export default function ContactPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-700 placeholder-gray-500"
                       placeholder="(0511) 123-4567"
                     />
                   </div>
@@ -192,14 +194,14 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-gray-700"
                     >
                       <option value="">Pilih subjek</option>
                       <option value="general">Pertanyaan Umum</option>
                       <option value="prayer">Permohonan Doa</option>
                       <option value="visit">Rencana Kunjungan</option>
                       <option value="ministry">Informasi Pelayanan</option>
-                      <option value="volunteer">Kesempatan Relawan</option>
+                      <option value="volunteer">Kesempatan Pelayan</option>
                       <option value="other">Lainnya</option>
                     </select>
                   </div>
@@ -216,7 +218,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none text-gray-700 placeholder-gray-500"
                     placeholder="Ceritakan bagaimana kami dapat membantu Anda..."
                   />
                 </div>
@@ -262,20 +264,30 @@ export default function ContactPage() {
               {/* Map Placeholder */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Temukan Kami</h3>
-                <div className="w-full h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                    <p className="text-gray-600 font-medium">Jl. Persadamas No. 123</p>
-                    <p className="text-gray-600">Banjarmasin, Kalimantan Selatan</p>
+                <a 
+                  href="https://maps.app.goo.gl/VqAqALvWt49jc1ic8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block hover:opacity-90 transition-opacity duration-200"
+                >
+                  <div className="w-full h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center">
+                    <div className="text-center">
+                      <MapPin className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                      <p className="text-gray-600 font-medium">Tatah Belayung Baru, Kertak Hanyar</p>
+                      <p className="text-gray-600">Banjarmasin, Kalimantan Selatan 70654</p>
+                    </div>
                   </div>
-                </div>
-                <motion.button
+                </a>
+                <motion.a
+                  href="https://maps.app.goo.gl/VqAqALvWt49jc1ic8"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                  className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 inline-block text-center"
                 >
                   Dapatkan Petunjuk Arah
-                </motion.button>
+                </motion.a>
               </div>
 
               {/* Social Media */}
@@ -291,14 +303,18 @@ export default function ContactPage() {
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.1, y: -2 }}
-                    href="#"
+                    href="https://www.instagram.com/gpdipersadamas?igsh=MXV5Y25jYXIyc2xndQ=="
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-pink-600 rounded-full flex items-center justify-center text-white hover:bg-pink-700 transition-colors duration-200"
                   >
                     <Instagram className="w-6 h-6" />
                   </motion.a>
                   <motion.a
                     whileHover={{ scale: 1.1, y: -2 }}
-                    href="#"
+                    href="https://youtube.com/@gpdipersadamasbanjarmasin?si=p8bLMqy4dYo_ws3y"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white hover:bg-red-700 transition-colors duration-200"
                   >
                     <Youtube className="w-6 h-6" />

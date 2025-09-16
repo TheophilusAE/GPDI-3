@@ -6,81 +6,54 @@ import { Calendar, Clock, MapPin, Users, Heart, BookOpen, Music } from 'lucide-r
 export default function EventsPage() {
   const upcomingEvents = [
     {
-      title: 'Penggalangan Dana Makanan Komunitas',
-      date: '15 Maret 2024',
-      time: '09:00 - 14:00',
-      location: 'Halaman Gereja',
-      description: 'Bantu kami melayani komunitas dengan menyumbangkan makanan non-perishable.',
+      title: 'Natal Jemaat',
+      date: 'TBA',
+      time: 'TBA',
+      location: 'TBA',
+      description: 'TBA',
       icon: Heart,
       color: 'from-red-500 to-pink-500'
     },
     {
-      title: 'Perayaan Paskah',
-      date: '31 Maret 2024',
-      time: '09:00 & 11:00',
-      location: 'Ruang Ibadah Utama',
-      description: 'Bergabunglah dengan kami untuk ibadah Paskah khusus merayakan kebangkitan Kristus.',
+      title: 'Paskah',
+      date: 'TBA',
+      time: 'TBA',
+      location: 'TBA',
+      description: 'TBA',
       icon: Calendar,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'Pertemuan Kelompok Remaja',
-      date: '20 Maret 2024',
-      time: '18:00 - 20:00',
-      location: 'Pusat Remaja',
-      description: 'Remaja dan dewasa muda berkumpul untuk permainan, diskusi, dan persekutuan.',
+      title: 'Ibadah Raya',
+      date: 'TBA',
+      time: 'TBA',
+      location: 'TBA',
+      description: 'TBA',
       icon: Users,
       color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Konferensi Iman & Harapan',
-      date: '5-7 April 2024',
-      time: '09:00 - 17:00',
-      location: 'Aula Utama',
-      description: 'Konferensi 3 hari dengan pembicara tamu dan sesi pengajaran mendalam.',
-      icon: BookOpen,
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      title: 'Konser Pujian Malam',
-      date: '12 April 2024',
-      time: '19:00 - 21:00',
-      location: 'Ruang Ibadah Utama',
-      description: 'Malam pujian dan penyembahan dengan tim musik gereja dan tamu istimewa.',
-      icon: Music,
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      title: 'Retret Keluarga',
-      date: '26-28 April 2024',
-      time: 'Jumat - Minggu',
-      location: 'Villa Retret Gunung',
-      description: 'Retret akhir pekan untuk seluruh keluarga dengan kegiatan dan persekutuan.',
-      icon: Heart,
-      color: 'from-teal-500 to-green-500'
     }
   ];
 
   const eventCategories = [
     {
-      title: 'Ibadah Khusus',
-      description: 'Perayaan hari-hari besar Kristen dan ibadah khusus',
-      count: '12 acara/tahun'
+      title: 'Ibadah Minggu',
+      description: 'Ibadah Rutin setiap minggu',
+      count: 'Setiap Minggu'
     },
     {
-      title: 'Konferensi & Seminar',
-      description: 'Pembelajaran mendalam dan konferensi rohani',
-      count: '6 acara/tahun'
+      title: 'Ibadah Sekolah Minggu',
+      description: 'Ibadah Rutin setiap minggu untuk anak-anak',
+      count: 'Setiap Minggu'
     },
     {
-      title: 'Kegiatan Komunitas',
-      description: 'Pelayanan sosial dan kegiatan komunitas',
-      count: '24 acara/tahun'
+      title: 'Doa & Puasa',
+      description: 'Pertemuan doa mingguan di sertai dengan puasa',
+      count: 'Setiap jumat'
     },
     {
-      title: 'Retret & KKR',
-      description: 'Retret spiritual dan kebaktian kebangunan rohani',
-      count: '4 acara/tahun'
+      title: 'Ibadah Pemuda Remaja',
+      description: 'Ibadah Rutin setiap minggu untuk remaja dan pemuda',
+      count: 'Setiap Sabtu'
     }
   ];
 

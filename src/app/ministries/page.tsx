@@ -63,28 +63,24 @@ export default function MinistriesPage() {
 
   const volunteerOpportunities = [
     {
-      title: 'Relawan Ibadah',
-      description: 'Bantu dalam persiapan dan pelaksanaan ibadah mingguan',
-      time: 'Minggu pagi',
-      commitment: '2-3 jam/minggu'
+      title: 'Pelayan PAW',
+      description: 'Bagi Jemaat Yang Memiliki Bakat Bermain Musik Dan Bernyanyi Untuk Melayani Dalam Ibadah Mingguan ',
+      time: 'Minggu pagi & Sore',
     },
     {
-      title: 'Relawan Anak',
-      description: 'Mengajar dan membimbing anak-anak dalam program Sekolah Minggu',
-      time: 'Minggu pagi',
-      commitment: '2 jam/minggu'
+      title: 'Pelayan Sekolah Minggu',
+      description: 'Membantu dalam persiapan dan pelaksanaan kegiatan sekolah minggu untuk anak-anak',
+      time: 'Minggu pagi & Sore',
     },
     {
-      title: 'Relawan Komunitas',
-      description: 'Terlibat dalam kegiatan pelayanan sosial dan komunitas',
+      title: 'Pelayan Multimedia',
+      description: 'Bagi yang memiliki keahlian dalam mengoperasikan peralatan audio, video, dan presentasi untuk mendukung ibadah dan acara gereja.',
       time: 'Fleksibel',
-      commitment: '4-6 jam/bulan'
     },
     {
-      title: 'Relawan Teknis',
-      description: 'Membantu dengan sound system, lighting, dan teknologi ibadah',
-      time: 'Sesuai jadwal',
-      commitment: '3-4 jam/minggu'
+      title: 'Pelayan Tamborine',
+      description: 'Bagi Jemaat Yang Memiliki Bakat Dalam Tamborine Dan Flag Untuk Melayani Dalam Ibadah Mingguan ',
+      time: 'Fleksibel',
     }
   ];
 
@@ -193,10 +189,10 @@ export default function MinistriesPage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-              Kesempatan Relawan
+              Kesempatan Pelayanan
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Temukan cara untuk melayani dengan menjadi relawan dalam berbagai kegiatan gereja
+              Temukan cara untuk melayani dengan menjadi pelayan Tuhan dalam berbagai kegiatan gereja
             </p>
           </motion.div>
 
@@ -220,11 +216,6 @@ export default function MinistriesPage() {
                     <span className="font-medium">Waktu:</span>
                     <span className="ml-2">{opportunity.time}</span>
                   </div>
-                  <div className="flex items-center text-sm text-gray-600">
-                    <Clock className="w-4 h-4 mr-2" />
-                    <span className="font-medium">Komitmen:</span>
-                    <span className="ml-2">{opportunity.commitment}</span>
-                  </div>
                 </div>
                 
                 <motion.button
@@ -232,7 +223,7 @@ export default function MinistriesPage() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full mt-4 bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors duration-200 text-sm font-medium"
                 >
-                  Daftar sebagai Relawan
+                  Daftar sebagai Pelayan
                 </motion.button>
               </motion.div>
             ))}

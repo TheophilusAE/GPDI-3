@@ -7,9 +7,9 @@ export default function ServicesSection() {
   const services = [
     {
       title: 'Ibadah Minggu Pagi',
-      time: '9:00 & 11:00',
+      time: '8:30',
       description: 'Bergabunglah dalam ibadah yang menginspirasi, pesan firman yang penuh kuasa, dan persekutuan dengan komunitas kami.',
-      features: ['Musik Live', 'Program Anak', 'Kopi & Persekutuan', 'Tersedia Penitipan Anak'],
+      features: ['Puji-Pujian', 'Firman Tuhan','Tersedia Sekolah Minggu Untuk Anak'],
       icon: Music,
       color: 'from-blue-500 to-blue-600'
     },
@@ -22,10 +22,10 @@ export default function ServicesSection() {
       color: 'from-purple-500 to-purple-600'
     },
     {
-      title: 'Kelompok Pendalaman Alkitab',
-      time: 'Kamis 19:00',
-      description: 'Mendalami firman Tuhan dengan pembelajaran dan diskusi interaktif.',
-      features: ['Pembelajaran Interaktif', 'Kelompok Kecil', 'Sesi Tanya Jawab', 'Materi Pembelajaran'],
+      title: 'Ibadah Minggu Sore',
+      time: '16.00',
+      description: 'Bergabunglah dalam ibadah yang menginspirasi, pesan firman yang penuh kuasa, dan persekutuan dengan komunitas kami.',
+      features: ['Puji-Pujian', 'Firman Tuhan','Tersedia Sekolah Minggu Untuk Anak'],
       icon: BookOpen,
       color: 'from-green-500 to-green-600'
     }
@@ -33,25 +33,28 @@ export default function ServicesSection() {
 
   const upcomingEvents = [
     {
-      title: 'Bakti Sosial Makanan',
-      date: '15 Maret 2024',
-      time: '09:00 - 14:00',
-      location: 'Area Parkir Gereja',
-      description: 'Bantu kami melayani komunitas dengan menyumbangkan makanan yang tahan lama.'
+      id: 1,
+      title: 'TBA',
+      date: '-',
+      time: '-',
+      location: '-',
+      description: '-'
     },
     {
-      title: 'Perayaan Paskah',
-      date: '31 Maret 2024',
-      time: '09:00 & 11:00',
-      location: 'Ruang Utama Gereja',
-      description: 'Bergabunglah dalam ibadah khusus Paskah merayakan kebangkitan Kristus.'
+      id: 2,
+      title: 'TBA',
+      date: '-',
+      time: '-',
+      location: '-',
+      description: '-'
     },
     {
-      title: 'Pertemuan Pemuda',
-      date: '20 Maret 2024',
-      time: '18:00 - 20:00',
-      location: 'Pusat Pemuda',
-      description: 'Remaja dan pemuda berkumpul untuk games, diskusi, dan persekutuan.'
+      id: 3,
+      title: 'TBA',
+      date: '-',
+      time: '-',
+      location: '-',
+      description: '-'
     }
   ];
 
@@ -139,7 +142,7 @@ export default function ServicesSection() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {upcomingEvents.map((event, index) => (
               <motion.div
-                key={event.title}
+                key={event.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -199,21 +202,14 @@ export default function ServicesSection() {
                 <p className="text-blue-100">09:00 & 11:00</p>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2">Doa Rabu</h4>
+                <h4 className="text-xl font-semibold mb-2">Ibadah Tengah Minggu</h4>
                 <p className="text-blue-100">19:00</p>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2">Pendalaman Alkitab</h4>
-                <p className="text-blue-100">Kamis 19:00</p>
+                <h4 className="text-xl font-semibold mb-2">Doa & Puasa</h4>
+                <p className="text-blue-100">Jumat 19:00</p>
               </div>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="mt-6 bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-50 transition-colors duration-200"
-            >
-              Rencanakan Kunjungan Anda
-            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -6,43 +6,43 @@ import { Heart, Users, BookOpen, Globe, Calendar, Award, Target, Eye } from 'luc
 export default function AboutPage() {
   const leadership = [
     {
-      name: 'Pendeta Michael Johnson',
-      role: 'Gembala Senior',
+      name: 'Pdt. James Mantiri',
+      role: 'Gembala Jemaat',
       description: 'Memimpin jemaat kami dengan kebijaksanaan dan kasih selama lebih dari 10 tahun.',
-      image: 'MJ'
+      image: 'JM'
     },
     {
-      name: 'Pendeta Sarah Williams',
-      role: 'Gembala Pembantu',
-      description: 'Mengawasi pelayanan masyarakat dan pemuda kami.',
-      image: 'SW'
+      name: 'Joen Mantiri',
+      role: 'Ibu Gembala',
+      description: 'Mendukung dan memberdayakan komunitas kami melalui pelayanan dan pengajaran Bersama suami tercinta.',
+      image: 'JM'
     },
     {
-      name: 'Penatua Robert Chen',
+      name: 'Bp. Margono',
       role: 'Ketua Dewan Penatua',
-      description: 'Memberikan bimbingan rohani dan tata kelola gereja.',
-      image: 'RC'
+      description: 'Memberikan bimbingan rohani dan tata kelola gereja serta memberikan nasihat bijaksana kepada seluruh jemaat.',
+      image: 'MG'
     }
   ];
 
   const history = [
     {
-      year: '1973',
+      year: '2015',
       title: 'Gereja Didirikan',
       description: 'GPDI Persadamas didirikan dengan visi untuk melayani masyarakat setempat.'
     },
     {
-      year: '1985',
+      year: '2018',
       title: 'Bangunan Pertama',
       description: 'Bangunan permanen pertama kami dibangun untuk menampung jemaat yang terus bertumbuh.'
     },
     {
-      year: '2000',
+      year: '2022',
       title: 'Perluasan',
       description: 'Menambahkan aula persekutuan dan ruang anak untuk melayani komunitas kami dengan lebih baik.'
     },
     {
-      year: '2015',
+      year: '2023',
       title: 'Renovasi Modern',
       description: 'Memperbarui fasilitas kami dengan teknologi modern sambil mempertahankan warisan kami.'
     }
@@ -82,13 +82,13 @@ export default function AboutPage() {
               <h2 className="text-4xl font-bold text-gray-800 mb-6">Kisah Kami</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  GPDI Persadamas didirikan pada tahun 1973 oleh sekelompok kecil orang percaya 
+                  GPDI Persadamas didirikan pada tahun 2013 oleh sekelompok kecil orang percaya 
                   yang berbagi visi untuk menciptakan tempat ibadah dan persekutuan yang ramah. 
                   Yang dimulai sebagai pertemuan sederhana di sekolah lokal telah berkembang menjadi 
                   komunitas yang berkembang dengan lebih dari 500 jemaat.
                 </p>
                 <p>
-                  Selama 50 tahun terakhir, kami tetap berkomitmen pada nilai-nilai inti kami yaitu 
+                  Selama 10 tahun terakhir, kami tetap berkomitmen pada nilai-nilai inti kami yaitu 
                   kasih, komunitas, iman, dan pelayanan. Gereja kami telah menjadi mercusuar harapan 
                   di komunitas kami, memberikan bimbingan rohani, dukungan praktis, dan 
                   tempat di mana orang dapat bertumbuh dalam hubungan mereka dengan Tuhan.
@@ -113,7 +113,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 text-white">
                 <h3 className="text-2xl font-bold mb-2">Warisan Kami</h3>
-                <p className="text-blue-100">50 tahun pelayanan setia</p>
+                <p className="text-blue-100">10 tahun pelayanan setia</p>
               </div>
             </motion.div>
           </div>

@@ -96,14 +96,17 @@ export default function HeroSection() {
               Bergabung Minggu Ini
             </motion.button>
             
-            <motion.button
+            <motion.a
+              href="https://youtube.com/@gpdipersadamasbanjarmasin?si=p8bLMqy4dYo_ws3y"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2 bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-900 transition-all duration-200"
             >
               <Play className="w-5 h-5" />
               <span>Tonton Online</span>
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Stats */}
@@ -115,7 +118,7 @@ export default function HeroSection() {
           >
             {[
               { icon: Users, number: '500+', label: 'Jemaat' },
-              { icon: Calendar, number: '50+', label: 'Tahun Melayani' },
+              { icon: Calendar, number: '10', label: 'Tahun Melayani' },
               { icon: Heart, number: '100+', label: 'Hidup Diubahkan' },
             ].map((stat, index) => (
               <motion.div

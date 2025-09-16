@@ -41,14 +41,18 @@ export default function Footer() {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
+                href="https://www.instagram.com/gpdipersadamas?igsh=MXV5Y25jYXIyc2xndQ=="
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
               >
                 <Instagram className="w-5 h-5" />
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
+                href="https://youtube.com/@gpdipersadamasbanjarmasin?si=p8bLMqy4dYo_ws3y"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
               >
                 <Youtube className="w-5 h-5" />
@@ -102,8 +106,8 @@ export default function Footer() {
                 <MapPin className="w-5 h-5 text-blue-400 mt-0.5" />
                 <div>
                   <p className="text-gray-300 text-sm">
-                    Jl. Persadamas No. 123<br />
-                    Banjarmasin, Kalimantan Selatan
+                    Tatah Belayung Baru, Kertak Hanyar<br />
+                    Banjarmasin, Kalimantan Selatan 70654
                   </p>
                 </div>
               </div>
