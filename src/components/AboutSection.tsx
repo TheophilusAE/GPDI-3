@@ -41,9 +41,7 @@ export default function AboutSection() {
             Tentang GPDI Persadamas
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Selama lebih dari 50 tahun, GPDI Persadamas telah menjadi mercusuar harapan dan iman 
-            di komunitas kami. Kami adalah keluarga yang beragam yang dipersatukan oleh kasih kepada Tuhan dan 
-            komitmen untuk melayani sesama.
+            Sudah 10 Tahun Persekutuan Ini Berdiri. Dari Tempat Yang Kecil Menjadi Besar. 
           </p>
         </motion.div>
 

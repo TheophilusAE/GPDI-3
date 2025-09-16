@@ -6,21 +6,21 @@ import { Heart, Users, BookOpen, Globe, Calendar, Award, Target, Eye } from 'luc
 export default function AboutPage() {
   const leadership = [
     {
-      name: 'Pastor Michael Johnson',
-      role: 'Senior Pastor',
-      description: 'Leading our congregation with wisdom and compassion for over 10 years.',
+      name: 'Pendeta Michael Johnson',
+      role: 'Gembala Senior',
+      description: 'Memimpin jemaat kami dengan kebijaksanaan dan kasih selama lebih dari 10 tahun.',
       image: 'MJ'
     },
     {
-      name: 'Pastor Sarah Williams',
-      role: 'Associate Pastor',
-      description: 'Overseeing our community outreach and youth ministries.',
+      name: 'Pendeta Sarah Williams',
+      role: 'Gembala Pembantu',
+      description: 'Mengawasi pelayanan masyarakat dan pemuda kami.',
       image: 'SW'
     },
     {
-      name: 'Elder Robert Chen',
-      role: 'Elder Board Chairman',
-      description: 'Providing spiritual guidance and church governance.',
+      name: 'Penatua Robert Chen',
+      role: 'Ketua Dewan Penatua',
+      description: 'Memberikan bimbingan rohani dan tata kelola gereja.',
       image: 'RC'
     }
   ];
@@ -28,28 +28,28 @@ export default function AboutPage() {
   const history = [
     {
       year: '1973',
-      title: 'Church Founded',
-      description: 'Grace Community Church was established with a vision to serve the local community.'
+      title: 'Gereja Didirikan',
+      description: 'GPDI Persadamas didirikan dengan visi untuk melayani masyarakat setempat.'
     },
     {
       year: '1985',
-      title: 'First Building',
-      description: 'Our first permanent building was constructed to accommodate our growing congregation.'
+      title: 'Bangunan Pertama',
+      description: 'Bangunan permanen pertama kami dibangun untuk menampung jemaat yang terus bertumbuh.'
     },
     {
       year: '2000',
-      title: 'Expansion',
-      description: 'Added the fellowship hall and children\'s wing to better serve our community.'
+      title: 'Perluasan',
+      description: 'Menambahkan aula persekutuan dan ruang anak untuk melayani komunitas kami dengan lebih baik.'
     },
     {
       year: '2015',
-      title: 'Modern Renovation',
-      description: 'Updated our facilities with modern technology while preserving our heritage.'
+      title: 'Renovasi Modern',
+      description: 'Memperbarui fasilitas kami dengan teknologi modern sambil mempertahankan warisan kami.'
     }
   ];
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -59,11 +59,11 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              About Grace Community
+              Tentang GPDI Persadamas
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Discover our story, meet our leadership, and learn about our mission 
-              to serve God and our community with love and faith.
+              Temukan kisah kami, kenali para pemimpin kami, dan pelajari misi kami 
+              untuk melayani Tuhan dan komunitas kami dengan kasih dan iman.
             </p>
           </motion.div>
         </div>
@@ -79,25 +79,25 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold text-gray-800 mb-6">Kisah Kami</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Grace Community Church was founded in 1973 by a small group of believers 
-                  who shared a vision of creating a welcoming place of worship and fellowship. 
-                  What started as a humble gathering in a local school has grown into a 
-                  thriving community of over 500 members.
+                  GPDI Persadamas didirikan pada tahun 1973 oleh sekelompok kecil orang percaya 
+                  yang berbagi visi untuk menciptakan tempat ibadah dan persekutuan yang ramah. 
+                  Yang dimulai sebagai pertemuan sederhana di sekolah lokal telah berkembang menjadi 
+                  komunitas yang berkembang dengan lebih dari 500 jemaat.
                 </p>
                 <p>
-                  Over the past 50 years, we have remained committed to our core values of 
-                  love, community, faith, and service. Our church has been a beacon of hope 
-                  in our community, providing spiritual guidance, practical support, and 
-                  a place where people can grow in their relationship with God.
+                  Selama 50 tahun terakhir, kami tetap berkomitmen pada nilai-nilai inti kami yaitu 
+                  kasih, komunitas, iman, dan pelayanan. Gereja kami telah menjadi mercusuar harapan 
+                  di komunitas kami, memberikan bimbingan rohani, dukungan praktis, dan 
+                  tempat di mana orang dapat bertumbuh dalam hubungan mereka dengan Tuhan.
                 </p>
                 <p>
-                  Today, Grace Community continues to evolve while staying true to our 
-                  founding principles. We are proud of our diverse congregation and our 
-                  commitment to serving not just our members, but our entire community 
-                  and beyond.
+                  Saat ini, GPDI Persadamas terus berkembang sambil tetap setia pada 
+                  prinsip-prinsip dasar kami. Kami bangga dengan keragaman jemaat kami dan 
+                  komitmen kami untuk melayani tidak hanya anggota kami, tetapi seluruh 
+                  komunitas dan sekitarnya.
                 </p>
               </div>
             </motion.div>
@@ -112,8 +112,8 @@ export default function AboutPage() {
               <div className="w-full h-96 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-2xl"></div>
               <div className="absolute inset-0 bg-black/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 text-white">
-                <h3 className="text-2xl font-bold mb-2">Our Heritage</h3>
-                <p className="text-blue-100">50 years of faithful service</p>
+                <h3 className="text-2xl font-bold mb-2">Warisan Kami</h3>
+                <p className="text-blue-100">50 tahun pelayanan setia</p>
               </div>
             </motion.div>
           </div>
@@ -130,9 +130,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Foundation</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">Fondasi Kami</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Built on the solid foundation of God's word and guided by our core principles
+              Dibangun di atas fondasi yang kokoh dari firman Tuhan dan dipandu oleh prinsip-prinsip inti kami
             </p>
           </motion.div>
 
@@ -140,20 +140,20 @@ export default function AboutPage() {
             {[
               {
                 icon: Target,
-                title: 'Our Mission',
-                content: 'To love God, love people, and make disciples who transform our community and world through the power of Jesus Christ.',
+                title: 'Misi Kami',
+                content: 'Mengasihi Tuhan, mengasihi sesama, dan menjadikan murid-murid yang mengubah komunitas dan dunia melalui kuasa Yesus Kristus.',
                 color: 'from-blue-500 to-blue-600'
               },
               {
                 icon: Eye,
-                title: 'Our Vision',
-                content: 'To be a thriving community where every person experiences God\'s love, grows in faith, and discovers their purpose in serving others.',
+                title: 'Visi Kami',
+                content: 'Menjadi komunitas yang berkembang di mana setiap orang mengalami kasih Tuhan, bertumbuh dalam iman, dan menemukan tujuan mereka dalam melayani sesama.',
                 color: 'from-purple-500 to-purple-600'
               },
               {
                 icon: Heart,
-                title: 'Our Values',
-                content: 'Love, Community, Faith, and Service - the four pillars that guide everything we do as a church family.',
+                title: 'Nilai-Nilai Kami',
+                content: 'Kasih, Komunitas, Iman, dan Pelayanan - empat pilar yang memandu segala yang kami lakukan sebagai keluarga gereja.',
                 color: 'from-green-500 to-green-600'
               }
             ].map((item, index) => (
@@ -187,9 +187,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Leadership</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">Para Pemimpin Kami</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the dedicated leaders who guide our church family with wisdom and compassion
+              Kenali para pemimpin berdedikasi yang membimbing keluarga gereja kami dengan kebijaksanaan dan kasih
             </p>
           </motion.div>
 
@@ -226,9 +226,9 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Journey</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">Perjalanan Kami</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key milestones in our church's history and growth
+              Tonggak penting dalam sejarah dan pertumbuhan gereja kami
             </p>
           </motion.div>
 
@@ -271,16 +271,16 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">Join Our Family</h2>
+            <h2 className="text-4xl font-bold mb-6">Bergabunglah dengan Keluarga Kami</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              We'd love to welcome you into our community of faith, fellowship, and service.
+              Kami ingin menyambut Anda ke dalam komunitas iman, persekutuan, dan pelayanan kami.
             </p>
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-blue-50 transition-colors duration-200"
             >
-              Plan Your Visit
+              Rencanakan Kunjungan Anda
             </motion.button>
           </motion.div>
         </div>

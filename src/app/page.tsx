@@ -10,7 +10,17 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
+  useEffect(() => {
+    // Check if this is first visit
+    const hasVisited = localStorage.getItem('hasVisitedBefore');
+    if (hasVisited) {
+      setIsLoading(false);
+    }
+  }, []);
+
   const handleSplashComplete = () => {
+    // Set flag in localStorage
+    localStorage.setItem('hasVisitedBefore', 'true');
     setIsLoading(false);
   };
 

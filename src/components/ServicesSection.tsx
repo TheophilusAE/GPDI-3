@@ -6,26 +6,26 @@ import { Clock, Users, Music, BookOpen, Calendar, MapPin } from 'lucide-react';
 export default function ServicesSection() {
   const services = [
     {
-      title: 'Sunday Morning Worship',
-      time: '9:00 AM & 11:00 AM',
-      description: 'Join us for inspiring worship, powerful messages, and fellowship with our community.',
-      features: ['Live Music', 'Children\'s Program', 'Coffee & Fellowship', 'Nursery Available'],
+      title: 'Ibadah Minggu Pagi',
+      time: '9:00 & 11:00',
+      description: 'Bergabunglah dalam ibadah yang menginspirasi, pesan firman yang penuh kuasa, dan persekutuan dengan komunitas kami.',
+      features: ['Musik Live', 'Program Anak', 'Kopi & Persekutuan', 'Tersedia Penitipan Anak'],
       icon: Music,
       color: 'from-blue-500 to-blue-600'
     },
     {
-      title: 'Wednesday Prayer Service',
-      time: '7:00 PM',
-      description: 'A mid-week gathering for prayer, reflection, and spiritual encouragement.',
-      features: ['Prayer Requests', 'Bible Study', 'Small Groups', 'Fellowship'],
+      title: 'Doa Rabu Malam',
+      time: '19:00',
+      description: 'Pertemuan tengah minggu untuk berdoa, merefleksi, dan mendapat dorongan rohani.',
+      features: ['Permohonan Doa', 'Pendalaman Alkitab', 'Kelompok Kecil', 'Persekutuan'],
       icon: BookOpen,
       color: 'from-purple-500 to-purple-600'
     },
     {
-      title: 'Bible Study Groups',
-      time: 'Thursday 7:00 PM',
-      description: 'Deep dive into God\'s word with interactive study and discussion.',
-      features: ['Interactive Study', 'Small Groups', 'Q&A Sessions', 'Resource Materials'],
+      title: 'Kelompok Pendalaman Alkitab',
+      time: 'Kamis 19:00',
+      description: 'Mendalami firman Tuhan dengan pembelajaran dan diskusi interaktif.',
+      features: ['Pembelajaran Interaktif', 'Kelompok Kecil', 'Sesi Tanya Jawab', 'Materi Pembelajaran'],
       icon: BookOpen,
       color: 'from-green-500 to-green-600'
     }
@@ -33,25 +33,25 @@ export default function ServicesSection() {
 
   const upcomingEvents = [
     {
-      title: 'Community Food Drive',
-      date: 'March 15, 2024',
-      time: '9:00 AM - 2:00 PM',
-      location: 'Church Parking Lot',
-      description: 'Help us serve our community by donating non-perishable food items.'
+      title: 'Bakti Sosial Makanan',
+      date: '15 Maret 2024',
+      time: '09:00 - 14:00',
+      location: 'Area Parkir Gereja',
+      description: 'Bantu kami melayani komunitas dengan menyumbangkan makanan yang tahan lama.'
     },
     {
-      title: 'Easter Celebration',
-      date: 'March 31, 2024',
-      time: '9:00 AM & 11:00 AM',
-      location: 'Main Sanctuary',
-      description: 'Join us for a special Easter service celebrating the resurrection of Christ.'
+      title: 'Perayaan Paskah',
+      date: '31 Maret 2024',
+      time: '09:00 & 11:00',
+      location: 'Ruang Utama Gereja',
+      description: 'Bergabunglah dalam ibadah khusus Paskah merayakan kebangkitan Kristus.'
     },
     {
-      title: 'Youth Group Meeting',
-      date: 'March 20, 2024',
-      time: '6:00 PM - 8:00 PM',
-      location: 'Youth Center',
-      description: 'Teens and young adults gather for games, discussion, and fellowship.'
+      title: 'Pertemuan Pemuda',
+      date: '20 Maret 2024',
+      time: '18:00 - 20:00',
+      location: 'Pusat Pemuda',
+      description: 'Remaja dan pemuda berkumpul untuk games, diskusi, dan persekutuan.'
     }
   ];
 
@@ -66,18 +66,18 @@ export default function ServicesSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Our Services & Events
+            Ibadah & Acara Kami
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Join us for worship, fellowship, and spiritual growth. We offer various 
-            services and events throughout the week to meet you where you are.
+            Bergabunglah bersama kami dalam ibadah, persekutuan, dan pertumbuhan rohani. 
+            Kami menyediakan berbagai layanan dan acara sepanjang minggu untuk menyambut Anda.
           </p>
         </motion.div>
 
         {/* Regular Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Regular Services
+            Ibadah Rutin
           </h3>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -133,7 +133,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
         >
           <h3 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Upcoming Events
+            Acara Mendatang
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -176,7 +176,7 @@ export default function ServicesSection() {
                   whileTap={{ scale: 0.98 }}
                   className="w-full mt-4 bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 text-sm font-medium"
                 >
-                  Learn More
+                  Selengkapnya
                 </motion.button>
               </motion.div>
             ))}
@@ -192,19 +192,19 @@ export default function ServicesSection() {
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-3xl font-bold mb-6">Service Times</h3>
+            <h3 className="text-3xl font-bold mb-6">Jadwal Ibadah</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <h4 className="text-xl font-semibold mb-2">Sunday Worship</h4>
-                <p className="text-blue-100">9:00 AM & 11:00 AM</p>
+                <h4 className="text-xl font-semibold mb-2">Ibadah Minggu</h4>
+                <p className="text-blue-100">09:00 & 11:00</p>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2">Wednesday Prayer</h4>
-                <p className="text-blue-100">7:00 PM</p>
+                <h4 className="text-xl font-semibold mb-2">Doa Rabu</h4>
+                <p className="text-blue-100">19:00</p>
               </div>
               <div>
-                <h4 className="text-xl font-semibold mb-2">Bible Study</h4>
-                <p className="text-blue-100">Thursday 7:00 PM</p>
+                <h4 className="text-xl font-semibold mb-2">Pendalaman Alkitab</h4>
+                <p className="text-blue-100">Kamis 19:00</p>
               </div>
             </div>
             <motion.button
@@ -212,7 +212,7 @@ export default function ServicesSection() {
               whileTap={{ scale: 0.95 }}
               className="mt-6 bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-50 transition-colors duration-200"
             >
-              Plan Your Visit
+              Rencanakan Kunjungan Anda
             </motion.button>
           </div>
         </motion.div>

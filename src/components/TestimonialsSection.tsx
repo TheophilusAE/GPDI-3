@@ -7,43 +7,43 @@ export default function TestimonialsSection() {
   const testimonials = [
     {
       name: 'Sarah Johnson',
-      role: 'Member for 5 years',
-      content: 'Grace Community has been a blessing to our family. The welcoming atmosphere and genuine care from everyone makes it feel like home.',
+      role: 'Anggota selama 5 tahun',
+      content: 'GPDI Persadamas telah menjadi berkat bagi keluarga kami. Suasana yang ramah dan kepedulian yang tulus dari semua orang membuatnya terasa seperti rumah.',
       rating: 5,
       image: 'SJ'
     },
     {
       name: 'Michael Chen',
-      role: 'Youth Leader',
-      content: 'The youth programs here have helped me grow in my faith and build lasting friendships. I\'m grateful for this community.',
+      role: 'Pemimpin Pemuda',
+      content: 'Program pemuda di sini telah membantu saya bertumbuh dalam iman dan membangun persahabatan yang langgeng. Saya bersyukur atas komunitas ini.',
       rating: 5,
       image: 'MC'
     },
     {
-      name: 'Elder Margaret Williams',
-      role: 'Member for 25 years',
-      content: 'This church has been my spiritual home for decades. The teaching is solid, the fellowship is warm, and the love is genuine.',
+      name: 'Penatua Margaret Williams',
+      role: 'Anggota selama 25 tahun',
+      content: 'Gereja ini telah menjadi rumah rohani saya selama puluhan tahun. Pengajarannya kuat, persekutuannya hangat, dan kasihnya tulus.',
       rating: 5,
       image: 'MW'
     },
     {
       name: 'David & Lisa Rodriguez',
-      role: 'New Members',
-      content: 'We were welcomed with open arms from day one. The children\'s programs are excellent, and we feel truly part of the family.',
+      role: 'Anggota Baru',
+      content: 'Kami disambut dengan tangan terbuka sejak hari pertama. Program anak-anak sangat baik, dan kami benar-benar merasa menjadi bagian dari keluarga.',
       rating: 5,
       image: 'DR'
     },
     {
-      name: 'Pastor James Thompson',
-      role: 'Former Pastor',
-      content: 'Grace Community embodies what it means to be a church family. The love, support, and commitment to serving others is inspiring.',
+      name: 'Pendeta James Thompson',
+      role: 'Mantan Gembala',
+      content: 'GPDI Persadamas mewujudkan arti keluarga gereja yang sesungguhnya. Kasih, dukungan, dan komitmen untuk melayani sesama sangat menginspirasi.',
       rating: 5,
       image: 'JT'
     },
     {
       name: 'Rebecca Kim',
-      role: 'Volunteer Coordinator',
-      content: 'The opportunities to serve and make a difference in our community have enriched my life in ways I never imagined.',
+      role: 'Koordinator Sukarelawan',
+      content: 'Kesempatan untuk melayani dan membuat perbedaan dalam komunitas kami telah memperkaya hidup saya dengan cara yang tidak pernah saya bayangkan.',
       rating: 5,
       image: 'RK'
     }
@@ -60,11 +60,11 @@ export default function TestimonialsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            What Our Community Says
+            Kata Mereka Tentang Kami
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Hear from the hearts of our church family about their experiences 
-            and the impact Grace Community has had on their lives.
+            Dengarkan dari hati keluarga gereja kami tentang pengalaman mereka 
+            dan dampak GPDI Persadamas dalam kehidupan mereka.
           </p>
         </motion.div>
 
@@ -120,18 +120,18 @@ export default function TestimonialsSection() {
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Ready to Share Your Story?
+              Siap Berbagi Cerita Anda?
             </h3>
             <p className="text-gray-600 mb-6">
-              Join our community and become part of a family that supports, 
-              encourages, and grows together in faith.
+              Bergabunglah dengan komunitas kami dan jadilah bagian dari keluarga yang saling mendukung, 
+              memberi semangat, dan bertumbuh bersama dalam iman.
             </p>
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-700 transition-colors duration-200"
             >
-              Visit Us This Sunday
+              Kunjungi Kami Minggu Ini
             </motion.button>
           </div>
         </motion.div>

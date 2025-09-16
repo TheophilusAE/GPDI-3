@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Users, Heart, BookOpen, Music, Globe, Calendar, Phone, Mail } from 'lucide-react';
+import { Users, Heart, BookOpen, Music, Globe, Calendar, Phone, Mail, Clock } from 'lucide-react';
 
 export default function MinistriesPage() {
   const ministries = [
@@ -89,7 +89,7 @@ export default function MinistriesPage() {
   ];
 
   return (
-    <div className="pt-20">
+    <div>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white">
         <div className="container mx-auto px-4 text-center">

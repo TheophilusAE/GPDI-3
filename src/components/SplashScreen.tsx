@@ -49,12 +49,33 @@ function SplashBackgroundParticles() {
 
 export default function SplashScreen({ onComplete }: SplashScreenProps) {
   const [isVisible, setIsVisible] = useState(true);
+  const [step, setStep] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      setTimeout(onComplete, 500); // Wait for exit animation
-    }, 3000); // Show splash for 3 seconds
+    // Sequence the animations
+    const steps = [
+      { delay: 0, duration: 2000 },    // Logo and name
+      { delay: 2000, duration: 2000 }, // Welcome message
+      { delay: 4000, duration: 1000 }  // Exit
+    ];
+
+    let currentStep = 0;
+    let timer: NodeJS.Timeout;
+
+    const runStep = () => {
+      timer = setTimeout(() => {
+        if (currentStep < steps.length - 1) {
+          setStep(currentStep + 1);
+          currentStep++;
+          runStep();
+        } else {
+          setIsVisible(false);
+          setTimeout(onComplete, 500);
+        }
+      }, steps[currentStep].duration);
+    };
+
+    runStep();
 
     return () => clearTimeout(timer);
   }, [onComplete]);
@@ -66,24 +87,36 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 overflow-hidden"
         >
-          <div className="text-center">
-            {/* Church Icon */}
+          <div className="absolute inset-0 overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.1, 0] }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+              className="absolute inset-0"
+              style={{
+                backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.15"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+              }}
+            />
+          </div>
+
+          <div className="relative z-10 text-center px-4">
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ 
-                type: "spring", 
-                stiffness: 200, 
-                damping: 15,
-                delay: 0.2 
-              }}
-              className="mb-8"
+              transition={{ type: "spring", stiffness: 200, damping: 15 }}
+              className="mb-12 relative"
             >
-              <div className="w-24 h-24 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl">
+              {/* Church Logo/Icon with Glow Effect */}
+              <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl relative">
+                <div className="absolute inset-0 rounded-full bg-blue-500 opacity-20 blur-xl"></div>
                 <svg 
-                  className="w-12 h-12 text-blue-600" 
+                  className="w-16 h-16 text-blue-600 relative z-10" 
                   fill="currentColor" 
                   viewBox="0 0 24 24"
                 >
@@ -92,59 +125,49 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               </div>
             </motion.div>
 
-            {/* Church Name */}
-            <motion.h1
+            {/* Church Name with Gradient Text */}
+            <motion.div
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-4"
+              transition={{ delay: 0.3, duration: 0.8 }}
+              className="space-y-4"
             >
-              GPDI Persadamas
-            </motion.h1>
-
-            {/* Subtitle */}
-            <motion.p
-              initial={{ y: 30, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="text-xl md:text-2xl text-blue-200 mb-8"
-            >
-              Banjarmasin
-            </motion.p>
-
-            {/* Loading Animation */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
-              className="flex justify-center space-x-2"
-            >
-              {[0, 1, 2].map((index) => (
-                <motion.div
-                  key={index}
-                  className="w-3 h-3 bg-white rounded-full"
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                    duration: 1.5,
-                    repeat: Infinity,
-                    delay: index * 0.2,
-                  }}
-                />
-              ))}
+              <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-100 to-white">
+                GPDI Persadamas
+              </h1>
+              <p className="text-2xl md:text-3xl text-blue-200 font-light">
+                Banjarmasin
+              </p>
             </motion.div>
 
-            {/* Loading Text */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.2, duration: 0.5 }}
-              className="text-blue-200 mt-4 text-lg"
+            {/* Welcome Message */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: step >= 1 ? 1 : 0, y: step >= 1 ? 0 : 20 }}
+              transition={{ duration: 1 }}
+              className="mt-12 space-y-6"
             >
-              Selamat datang di komunitas kami
-            </motion.p>
+              <p className="text-xl md:text-2xl text-blue-100 font-light">
+                Selamat datang di rumah kedua Anda
+              </p>
+              <div className="flex justify-center space-x-3 mt-4">
+                {[0, 1, 2].map((index) => (
+                  <motion.div
+                    key={index}
+                    className="w-2 h-2 bg-white rounded-full"
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.3, 1, 0.3],
+                    }}
+                    transition={{
+                      duration: 1,
+                      repeat: Infinity,
+                      delay: index * 0.2,
+                    }}
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
 
           {/* Background Animation */}
