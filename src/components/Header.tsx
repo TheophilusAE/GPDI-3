@@ -36,18 +36,18 @@ export default function Header() {
             : 'bg-white/95 backdrop-blur-sm'
         }`}
       >
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex justify-between items-center">
+        <div className="container mx-auto px-4 py-2 sm:py-4">
+          <div className="flex justify-between items-center space-x-2 sm:space-x-4">
             {/* Logo */}
             <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                <Church className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                <Church className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-gray-800">
+                <h1 className="text-lg sm:text-2xl font-bold text-gray-800">
                   GPDI Persadamas
                 </h1>
-                <p className="text-sm text-gray-600">Banjarmasin</p>
+                <p className="text-xs sm:text-sm text-gray-600">Banjarmasin</p>
               </div>
             </div>
 
