@@ -114,7 +114,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               className="mb-12 relative"
             >
               {/* Church Logo with Glow Effect */}
-              <div className="w-40 h-40 mx-auto relative">
+              <div className="w-56 h-56 mx-auto relative">
                 <div className="absolute inset-0 bg-blue-500 opacity-20 blur-2xl rounded-full"></div>
                 <div className="relative w-full h-full">
                   <Image

@@ -1,7 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Church, Phone, Mail, MapPin, Facebook, Instagram, Youtube, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Facebook, Instagram, Youtube, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -19,8 +20,14 @@ export default function Footer() {
             className="space-y-4"
           >
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <Church className="w-5 h-5 text-white" />
+              <div className="w-16 h-16 relative">
+                <Image
+                  src="/Logo_GPDI-removebg-preview.png"
+                  alt="GPDI Persadamas Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </div>
               <div>
                 <h3 className="text-xl font-bold">GPDI Persadamas</h3>
@@ -136,21 +143,28 @@ export default function Footer() {
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
                   <p className="text-white font-medium text-sm">Ibadah Minggu</p>
-                  <p className="text-gray-300 text-sm">09:00 & 11:00</p>
+                  <p className="text-gray-300 text-sm">Minggu 08:30 & 16:00</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
-                  <p className="text-white font-medium text-sm">Ibadah Doa Rabu</p>
-                  <p className="text-gray-300 text-sm">19:00</p>
+                  <p className="text-white font-medium text-sm">Ibadah Tengah Minggu</p>
+                  <p className="text-gray-300 text-sm">Rabu 19:00</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Clock className="w-5 h-5 text-blue-400" />
                 <div>
-                  <p className="text-white font-medium text-sm">Studi Alkitab</p>
-                  <p className="text-gray-300 text-sm">Kamis 19:00</p>
+                  <p className="text-white font-medium text-sm">Ibadah Pemuda Remaja</p>
+                  <p className="text-gray-300 text-sm">Sabtu 16:00 & 18:00</p>
+                </div>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Clock className="w-5 h-5 text-blue-400" />
+                <div>
+                  <p className="text-white font-medium text-sm">Ibadah Sekolah Minggu</p>
+                  <p className="text-gray-300 text-sm">Minggu 08:30 & 16:00</p>
                 </div>
               </div>
             </div>

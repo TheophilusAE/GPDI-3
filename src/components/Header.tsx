@@ -21,8 +21,7 @@ export default function Header() {
   const navItems = [
     { name: 'Beranda', href: '/' },
     { name: 'Tentang', href: '/about' },
-    { name: 'Ibadah', href: '/services' },
-    { name: 'Acara', href: '/events' },
+    { name: 'Kegiatan', href: '/kegiatan' },
     { name: 'Pelayanan', href: '/ministries' },
     { name: 'Kontak', href: '/contact' },
   ];
