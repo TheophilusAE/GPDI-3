@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 interface SplashScreenProps {
   onComplete: () => void;
@@ -112,16 +113,18 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               transition={{ type: "spring", stiffness: 200, damping: 15 }}
               className="mb-12 relative"
             >
-              {/* Church Logo/Icon with Glow Effect */}
-              <div className="w-32 h-32 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl relative">
-                <div className="absolute inset-0 rounded-full bg-blue-500 opacity-20 blur-xl"></div>
-                <svg 
-                  className="w-16 h-16 text-blue-600 relative z-10" 
-                  fill="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
-                </svg>
+              {/* Church Logo with Glow Effect */}
+              <div className="w-40 h-40 mx-auto relative">
+                <div className="absolute inset-0 bg-blue-500 opacity-20 blur-2xl rounded-full"></div>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/Logo_GPDI-removebg-preview.png"
+                    alt="GPDI Persadamas Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
             </motion.div>
 
@@ -148,7 +151,7 @@ export default function SplashScreen({ onComplete }: SplashScreenProps) {
               className="mt-12 space-y-6"
             >
               <p className="text-xl md:text-2xl text-blue-100 font-light">
-                Selamat datang di rumah kedua Anda
+                Selamat datang di GPDI Persadamas, tempat di mana iman bertumbuh dan komunitas berkembang.
               </p>
               <div className="flex justify-center space-x-3 mt-4">
                 {[0, 1, 2].map((index) => (

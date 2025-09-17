@@ -45,7 +45,12 @@ export default function AboutPage() {
       year: '2023',
       title: 'Renovasi Modern',
       description: 'Memperbarui fasilitas kami dengan teknologi modern sambil mempertahankan warisan kami.'
-    }
+    },
+    {
+      year: '2025',
+      title: 'Perluasan',
+      description: 'Menambahkan aula persekutuan dan ruang anak untuk melayani komunitas kami dengan lebih baik.'
+    },
   ];
 
   return (
@@ -132,7 +137,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-gray-800 mb-6">Fondasi Kami</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Dibangun di atas fondasi yang kokoh dari firman Tuhan dan dipandu oleh prinsip-prinsip inti kami
+              Dibangun di atas fondasi yang kokoh dari firman Tuhan dan Di Bimbing oleh Gembala Kami
             </p>
           </motion.div>
 
@@ -187,7 +192,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-800 mb-6">Para Pemimpin Kami</h2>
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">Para Pengurus Persekutuan</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Kenali para pemimpin berdedikasi yang membimbing keluarga gereja kami dengan kebijaksanaan dan kasih
             </p>
@@ -228,7 +233,7 @@ export default function AboutPage() {
           >
             <h2 className="text-4xl font-bold text-gray-800 mb-6">Perjalanan Kami</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Tonggak penting dalam sejarah dan pertumbuhan gereja kami
+              Perjalan 10 tahun kami yang penuh berkat dan pertumbuhan
             </p>
           </motion.div>
 
